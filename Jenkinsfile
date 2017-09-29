@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage ('Check server health') {
 			steps {
-				sh 'curl -k -i -X GET https://10.0.128.2/health'
+				sh 'curl -k -i -X GET https://conjur-master/health'
 			}
 		}
 		stage ('Create Host') {
