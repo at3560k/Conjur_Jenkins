@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage ('Update Policy') {
 			steps {
-				sh 'conjur policy load --as-group security_admin policy.yml'
+				sh 'conjur policy load --as-group security_admin policy/policy.yml'
 			}
 		}
 	}
