@@ -7,9 +7,9 @@ pipeline {
 				sh 'curl -k -i -X GET https://conjur-master/health'
 			}
 		}
-		stage ('Create Host') {
+		stage ('Update Policy') {
 			steps {
-				sh 'chmod +x create_host.sh && ./create_host.sh'
+				sh 'conjur policy load --as-group security_admin policy.yml'
 			}
 		}
 	}
