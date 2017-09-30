@@ -9,6 +9,8 @@ RUN	apt-get update &&\
 	tar -C /usr/local/bin -xzvf summon-linux-amd64.tar.gz &&\
 	curl -L -O https://github.com/cyberark/conjur-cli/releases/download/v5.4.0/conjur_5.4.0-1_amd64.deb &&\
 	dpkg -i conjur_5.4.0-1_amd64.deb &&\
-	apt-get install -f -y
+	apt-get install -f -y &&\
+	rm -f summon-linux-amd64.tar.gz &&\
+	rm -f conjur_5.4.0-1_amd64.deb
 USER	jenkins
 EXPOSE	8080 50000
