@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage ('Check server health') {
 			steps {
-				sh 'curl -k -i -X GET https://conjur-master/health'
+				sh 'printf \"Hello World\"'
 			}
 		}
 		stage ('Update Policy') {
