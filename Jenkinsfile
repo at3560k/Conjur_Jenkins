@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	stages {
-		stage ('Check server health') {
+		stage ('Test Pipeline') {
 			steps {
 				sh 'printf \"Hello World\"'
 			}
